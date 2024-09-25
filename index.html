@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuestos Mecatrónicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Presupuestos Mecatrónicos</h2>
+<h2>Cliente: <input type="text" id="cliente"></h2>
+
+<table id="productosTable">
+    <tr>
+        <th>CANTIDAD</th>
+        <th>PRODUCTO</th>
+        <th>PRECIO UNIT</th>
+        <th>PRECIO</th>
+    </tr>
+</table>
+
+<button onclick="agregarProducto()">Agregar Producto</button>
+<p></p>
+
+<table>
+    <tr>
+        <th>Valores de Cuota</th>
+        <th>Valores Totales</th>
+    </tr>
+    <tr>
+        <td>
+            <label><input type="radio" name="cuota" value="12" checked> 12 Cuotas SIN INTERÉS: <span id="cuotaAHORA12" class="right">$0.00</span><br></label>
+            <label><input type="radio" name="cuota" value="18"> 18 Cuotas 35% INTERÉS: <span id="cuotaAHORA18" class="right">$0.00</span><br></label>
+        </td>
+        <td>
+            Subtotal: <span id="subtotal" class="right">$0.00</span><br>
+            IVA: <span id="iva" class="right">$0.00</span><br>
+            Total: <span id="total" class="right">$0.00</span>
+        </td>
+    </tr>
+</table>
+
+<button onclick="calcularPrecios()">Calcular Precios</button>
+<button onclick="window.print()">Imprimir Presupuesto</button>
+
+<script src="script.js"></script>
+</body>
+</html>
